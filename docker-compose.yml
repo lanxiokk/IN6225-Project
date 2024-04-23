@@ -1,0 +1,27 @@
+version: '3'
+services:
+  todoapp:
+    image: lanxikk0211/todoapp:latest
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/todo_db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: WswWlx0211!
+
+  effective-todo:
+    image: lanxikk0211/effective-todo:latest
+    ports:
+      - "4200:4200"
+
+  db:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: 'todo_db'
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: 'WswWlx0211!'
+      MYSQL_ROOT_PASSWORD: 'WswWlx0211!'
+    volumes:
+      - ./todo_db_schema.sql:/docker-entrypoint-initdb.d/todo_db_schema.sql
