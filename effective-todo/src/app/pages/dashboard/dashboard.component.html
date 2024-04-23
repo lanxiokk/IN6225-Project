@@ -1,0 +1,35 @@
+<div class="site-wrap">
+
+  <nav class="site-nav">
+
+    <div class="name">
+      {{ usernam }}
+    </div>
+
+    <ul>
+      <li class="active"><a href="dashboard" (click)="showTodos()">Todos</a>
+        <ul>
+          <li><a (click)="showCreateTodoForm()">Create New Todo</a></li>
+          <!-- <li><a >Create Email Reminder</a></li> -->
+        </ul>
+      </li>
+      <li><a href="" (click)="logout()">Sign out</a></li>
+    </ul>
+
+    <div class="note">
+      <h3>Your Todos</h3>
+      <p>Try create new todos.</p>
+    </div>
+
+  </nav>
+
+  <main>
+
+    <header>
+    </header>
+    <app-create-todo *ngIf="showCreateTodo"></app-create-todo>
+    <app-todos *ngIf="showContentColumns"></app-todos>
+
+  </main>
+
+</div>

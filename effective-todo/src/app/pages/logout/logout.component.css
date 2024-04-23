@@ -1,0 +1,11 @@
+.btn-signout {
+    transition: background-color 0.3s ease;
+  
+    color: #fbfdff;
+      background: #a7e245;
+      transform: translateX(-30%);
+  }
+  
+  .btn-signout:hover {
+    background-color: orange; 
+  }

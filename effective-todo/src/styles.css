@@ -1,0 +1,33 @@
+:root {
+    --dark-orange: #FF8C00;
+    --orange: #FFA500;
+  }
+  
+  body {
+    background-color: var(--dark-orange);
+  }
+  /* h1, h2, h3, h4, h5, h6 {
+    color: var(--orange);
+  }
+  
+  a {
+    color: var(--orange);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .button {
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: darken(var(--orange), 10%);
+  }
+   */
